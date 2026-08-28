@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkout
+  namespace: shop
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: checkout
+          image: ghcr.io/acme/checkout:1.9.0
+          ports:
+            - containerPort: 8080
+        - name: sidecar
+          image: ghcr.io/acme/proxy:0.4.1
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 15020

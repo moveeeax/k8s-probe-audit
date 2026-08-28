@@ -1,0 +1,11 @@
+# Built binary — anchored to repo root so a cmd/k8s-probe-audit/ source dir is never ignored.
+/k8s-probe-audit
+/dist/
+
+# Go build/test artifacts
+*.test
+*.out
+coverage.txt
+
+# Keep all fixtures under any testdata/ tree tracked.
+!testdata/**
