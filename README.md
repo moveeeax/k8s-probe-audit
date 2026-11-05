@@ -1,7 +1,7 @@
 # k8s-probe-audit
 
 [![CI](https://github.com/moveeeax/k8s-probe-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/moveeeax/k8s-probe-audit/actions/workflows/ci.yml)
-[![Go](https://img.shields.io/badge/go-1.22-00ADD8?logo=go)](go.mod)
+[![Go](https://img.shields.io/badge/go-1.26%2B-00ADD8?logo=go)](go.mod)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Flag Kubernetes workloads that are missing a **liveness** or **readiness** probe, and
@@ -23,6 +23,8 @@ production. `k8s-probe-audit` is a cheap gate that catches that at PR time.
 - Exits **1** when anything is flagged, so a CI step fails the build.
 
 ## Install
+
+Requires Go 1.26 or newer.
 
 ```bash
 go install github.com/moveeeax/k8s-probe-audit@latest
