@@ -112,3 +112,7 @@ go vet ./...
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+**Archived on 2026-11-05.** missing liveness and readiness probes are default checks in kube-linter, Polaris and kube-score, which also lint many other things in the same pass; this repo checks only presence and has no angle of its own.
